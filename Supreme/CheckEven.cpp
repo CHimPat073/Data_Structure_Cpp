@@ -14,7 +14,7 @@ int main(){
     int N;
     cout<<"Enter your number: ";
     cin>>N;
-    CheckEven(4);
+    CheckEven(6);
 
     return 0;
 }
