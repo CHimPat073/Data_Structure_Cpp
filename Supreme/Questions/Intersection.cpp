@@ -5,6 +5,7 @@ int Intersection(int arr1[],int arr2[],int n,int m){
     for(int a1=0;a1<n;a1++){
         for(int a2=0;a2<m;a2++){
             if(arr1[a1]==arr2[a2]){
+                arr2[a2]=-1;
                 ans.push_back(arr1[a1]);
             }
         }

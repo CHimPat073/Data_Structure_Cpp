@@ -8,18 +8,21 @@ using namespace std;
     }
 
     for(int i=0;i<m;i++){
+        //check if arr2[i] is present in arr1 or not
+        arr1[i]=-1;
         ans.push_back(arr2[i]);
     
     }
-
+    // sort(ans.begin(),ans.end());
     for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<" ";
+        
     }
 }
 int main(){
-    int arr1[] = {1,2,3,4,5};
-    int arr2[] = {7,8,9};
-    vector<int> ans = findUnion(arr1,arr2,5,3);
+    int arr1[] = {3, 4, 6, 7, 9, 9};
+    int arr2[] = {1, 5, 7, 8, 8};
+    vector<int> ans = findUnion(arr1,arr2,6,5);
     
     return 0;
 }
