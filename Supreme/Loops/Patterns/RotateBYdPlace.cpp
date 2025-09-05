@@ -28,10 +28,22 @@ void BruteRotate(vector<int> arr, int d){
     }
     PrintArray(arr);
 }
+//Optimal
+void OptimalRotate(vector<int> arr, int d){
+    int n = arr.size();
+    if(n==0) return;
+    d=d%n;
+    if(d==0)return;
 
+    reverse(arr.begin(),arr.begin()+d+1);
+    reverse(arr.begin()+d+1,arr.end());
+    reverse(arr.begin(),arr.end());
+    PrintArray(arr);
+}
 int main(){
-    vector<int> arr={1, 2, 3, 4, 5, 6, 7};
-    int d=3;    
-    BruteRotate(arr,d);
+    vector<int> arr={-1,-100,3,99};
+    int d=2;    
+    // BruteRotate(arr,d);
+    OptimalRotate(arr,d);
     return 0;
 }
