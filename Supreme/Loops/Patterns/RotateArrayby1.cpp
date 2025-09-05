@@ -6,17 +6,27 @@ void PrintArray(vector<int>& arr) {
     }
     cout << endl;
 }
-void rotateArraybyone(vector<int>& arr) {
+void rotateArraybyoneRight(vector<int>& arr) {
         int n= arr.size();
-        int temp =arr[0];
-        for(int i=0;i<n;i++){
-            arr[i-1]=arr[i];
+        int temp =arr[n-1];
+        for(int i=n-1;i>=1;--i){
+            arr[i]=arr[i-1];
         }
-        arr[n-1]=temp;
+        arr[0]=temp;
+        PrintArray(arr);
+    }
+void rotateArraybyoneLeft(vector<int>& arr) {
+        int n = arr.size();
+        int temp = arr[0];
+        for(int i = 0; i < n - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[n - 1] = temp;
         PrintArray(arr);
     }
  int main(){
     vector<int> arr={1, 2, 3, 4, 5};
-    rotateArraybyone(arr);
+    rotateArraybyoneRight(arr);
+    rotateArraybyoneLeft(arr);
     return 0;
 }
