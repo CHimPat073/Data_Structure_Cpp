@@ -12,7 +12,9 @@ int removeDuplicates(vector<int>& nums) {
         index++;
     }
     return s.size();     
+
 }
+//Two Pointer Approach
 int removeDuplicates2(vector<int>& nums) {
     int n=nums.size();
     int i=0;
