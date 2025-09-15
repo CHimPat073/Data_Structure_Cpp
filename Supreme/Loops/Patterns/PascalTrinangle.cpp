@@ -40,7 +40,7 @@ int main(){
     cout<<ans<<endl;
     RowPrint(5);
     cout<<endl;
-    RowPrint2(5);
+    RowPrint2(4);
     cout<<endl;
     PrintTriangle(6);
     return 0;
