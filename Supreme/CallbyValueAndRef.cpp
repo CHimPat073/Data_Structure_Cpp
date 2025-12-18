@@ -28,7 +28,7 @@ int main(){
     int a=4, b=5;
     cout<<"The value before swapping is "<<endl<<a<<endl<<b<<endl;
     //swap(a,b);   //this will not swap  a and b
-    // swappointer(&a,&b);  //This will swap a and b using pointer refrence
+    //swappointer(&a,&b);  //This will swap a and b using pointer refrence
     swapRefrence(a,b);
     cout<<"The value after swapping is: "<<endl<<a<<endl<<b<<endl;
     cout<<"The sum of 4 and 5 is "<<sum(a,b)<<endl;
