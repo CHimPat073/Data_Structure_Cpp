@@ -36,6 +36,7 @@ int main(){
     n2->next=n3;
     n3->next=n4;
     n4->next=n5;
+    n5->next=NULL; 
 
     cout<<"Printing Linked List: "<<endl;;
     print(n1);
