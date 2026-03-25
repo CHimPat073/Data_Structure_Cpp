@@ -107,6 +107,66 @@ void InsertAtPosition2(Node* &head,Node* &tail, int Position,int val){
     return;
 
 }
+void DeleteNode(int Position, Node* &head, Node* &tail){
+    if(head==NULL){
+        cout<<"List is Empty"<<endl;
+        return;
+    }
+    if(head->next==NULL){
+        Node *temp=head;
+        head=NULL;
+        tail=NULL;
+        delete temp;
+        return;
+    }
+    //head
+    if(Position==0){
+        Node* temp=head;
+        head=head->next;
+        head->prev=NULL;
+        temp->next=NULL;
+        delete temp;
+        return;
+
+    }
+    int len=getLength(head);
+    if(Position>=len){
+        cout<<"Invalid Position"<<endl;
+        return;
+    }
+    //tail
+    if(Position==len-1){
+        Node* temp=tail;
+        tail=tail->prev;
+        temp->prev=NULL;
+        tail->next=NULL;
+        delete temp;
+        return;
+    }
+    //Middle 
+    //find left node
+    int i =1;
+    Node* left=head;
+    while(i<Position){
+        left=left->next;
+        i++;
+    }
+    Node* curr=left->next;
+    Node* right=curr->next;
+
+    left->next=right;
+    right->prev=left;
+    curr->next=NULL;
+    curr->prev=NULL;
+    delete curr;
+    return;
+
+
+
+       
+
+
+}
 int main(){
     Node* head=NULL;
     Node* tail=NULL;
@@ -130,9 +190,12 @@ int main(){
     Print(head);
     cout<<endl;
 
-        InsertAtPosition2(head,tail,7,35);
+    InsertAtPosition2(head,tail,7,35);
     Print(head);
     cout<<endl;
+
+    DeleteNode(1,head,tail);
+    Print(head);
     
     
     return 0;
