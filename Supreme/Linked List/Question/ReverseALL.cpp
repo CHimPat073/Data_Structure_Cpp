@@ -37,9 +37,22 @@ Node* reverseList(Node* head) {
     }
     return prev;
 }
+Node* reverseNodeRecursive(Node* curr, Node* prev){
+    if(curr==NULL){
+        return prev;
+    Node* fwd=curr->next;
+    curr->next=prev;
+    prev=curr;
+    curr=fwd;
+    }
+    return reverseNodeRecursive(curr,prev);
+    ;
+
+}
 
 int main(){
     Node* head=new Node(10);
+    Node* prev=NULL;
     head->next=new Node(20);
     head->next->next=new Node(30);
     head->next->next->next=new Node(40);
@@ -51,6 +64,13 @@ int main(){
     cout<<endl;
     cout<<"After Reversing the List: "<<endl;
     Print(head);
+
+    // head=reverseNodeRecursive(head,prev);
+    // cout<<endl;
+    // cout<<"After Reversing the List: "<<endl;
+    // Print(head);
+
+
 
     return 0;
 }
