@@ -64,7 +64,7 @@ Node*  FindMiddle2(Node* head){
         return head;
     }
     Node* slow=head;
-    Node* fast=head;
+    Node* fast=head->next;
     while(slow!=NULL && fast!=NULL){
         fast=fast->next;
         if(fast!=NULL){
@@ -82,7 +82,7 @@ int main(){
     head->next->next=new Node(30); 
     head->next->next->next=new Node(40);
     head->next->next->next->next=new Node(50);
-    head->next->next->next->next->next=new Node(60);
+    // head->next->next->next->next->next=new Node(60);
 
 
     cout<<"Linked List: "<<endl;
