@@ -11,7 +11,6 @@ void InsertSorted(stack<int>& s,int target){
     int temp= s.top();
     s.pop();
     InsertSorted(s,target);
-    s.push(temp);
 }
 void sortStack(stack<int> &s){
     if(s.empty()){
