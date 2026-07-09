@@ -4,13 +4,18 @@ using namespace std;
 
 void InsertSorted(stack<int>& s,int target){
     //base
-    if(s.empty() || s.top()>=target){
+    if(s.empty()){
+        s.push(target);
+        return;
+    }
+    if(s.top()>=target){
         s.push(target);
         return;
     }
     int temp= s.top();
     s.pop();
     InsertSorted(s,target);
+    s.push(temp);
 }
 void sortStack(stack<int> &s){
     if(s.empty()){
@@ -20,7 +25,6 @@ void sortStack(stack<int> &s){
     s.pop();
     sortStack(s);
     InsertSorted(s,temp);
-    s.push(temp);
 
 }
 int main(){
