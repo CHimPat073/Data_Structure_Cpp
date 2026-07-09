@@ -6,12 +6,12 @@ bool isValid(string s) {
         for(int i=0;i<s.length();i++){
             char ch=s[i];
 
-            //open bracket
+            //open bracket checks
             if( ch =='(' || ch =='{'|| ch=='[' ){
                 st.push(ch);
             }
             else{
-                //closing
+                //closing bracket check
                 if(!st.empty()){
                     char topCH=st.top();
                     if(ch ==')' && topCH =='('){
