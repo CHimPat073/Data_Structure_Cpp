@@ -27,7 +27,7 @@ bool removeBrackets(string s){
     return false;
 }
 int main(){
-    string s = "((a+b))";   
+    string s = "(a+b)";   
 
     if(removeBrackets(s)){
         cout<<"Redundant Brackets are present"<<endl;
