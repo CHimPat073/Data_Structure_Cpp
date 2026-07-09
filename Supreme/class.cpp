@@ -51,11 +51,18 @@ int TrailingZeros(int n){
     return count;
 }
 //Given N Consider a inifinite 
-int Find NthDigit(int n){
-    long digits=1;
-    
-}
+// int Find NDigit(int n){
+//     long digits=1;
 
+//Write a function lucky_sevens which takes an array of int and returns true if any three consecutive numbers in the array sum to 7. 
+bool lucky_sevens(vector<int> arr) {
+    for (int i = 0; i < arr.size() - 2; i++) {
+        if (arr[i] + arr[i+1] + arr[i+2] == 7) {
+            return true;
+        }
+    }
+    return false;
+}
 int main(){
     string s;
     cin>>s;
