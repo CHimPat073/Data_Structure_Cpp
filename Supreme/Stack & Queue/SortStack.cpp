@@ -4,11 +4,8 @@ using namespace std;
 
 void InsertSorted(stack<int>& s,int target){
     //base
-    if(s.empty()){
-        s.push(target);
-        return;
-    }
-    if(s.top()>=target){
+   
+    if(s.empty()|| s.top()>=target){
         s.push(target);
         return;
     }
