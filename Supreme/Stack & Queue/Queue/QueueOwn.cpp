@@ -60,6 +60,9 @@ class Queue{
             cout<<"Queue is not Empty"<<endl;
         }
     }
+    int getSize(){
+        return back-front;
+    }
 
 
 };
@@ -76,5 +79,12 @@ int main(){
     q.getBack();
     
     q.isEmpty();
+    
+    cout<<"Size of Queue is: "<<q.getSize()<<endl;
+
+    q.pop();
+
+    q.getFront();
+    q.getBack();
     return 0;
 }
