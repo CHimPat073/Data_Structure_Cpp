@@ -2,7 +2,6 @@
 using namespace std;
  int minAddToMakeValid(string s) {
         stack<int> st;
-        int cnt=0;
         int closing = 0;
         for(int i=0;i<s.length();i++){
             char ch=s[i];
@@ -22,6 +21,6 @@ using namespace std;
 int main(){
     string s="()))((";
     cout<<minAddToMakeValid(s);
-    
+
     return 0;
 }
