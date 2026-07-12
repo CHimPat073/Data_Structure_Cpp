@@ -39,7 +39,15 @@ int main(){
         q.pop();
     }
     cout<<endl;
-    reverse2(q);
+    queue<int> q2;
+
+    q2.push(3);
+    q2.push(6);
+    q2.push(9);
+    q2.push(2);
+    q2.push(8);
+    
+    reverse2(q2);
     cout<<"Recursive Method"<<endl;
      while(!q.empty()){
         cout<<q.front()<<" ";
