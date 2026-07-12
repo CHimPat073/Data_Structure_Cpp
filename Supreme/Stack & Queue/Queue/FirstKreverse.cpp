@@ -20,8 +20,9 @@ void reverseK(queue<int> &q,int k){
     cnt=0;
     for(int i=0;i<n-k;i++){
         int temp=q.front();
-        q.pop();
         q.push(temp);
+        q.pop();
+        
     }
 
 }
