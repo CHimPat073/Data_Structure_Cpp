@@ -38,6 +38,7 @@ int main(){
         cout<<q.front()<<" ";
         q.pop();
     }
+    cout<<endl;
     reverse2(q);
     cout<<"Recursive Method"<<endl;
      while(!q.empty()){
