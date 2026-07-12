@@ -18,14 +18,10 @@ void reverseK(queue<int> &q,int k){
         q.push(temp);
     }
     cnt=0;
-    while(!q.empty()){
+    for(int i=0;i<n-k;i++){
         int temp=q.front();
         q.pop();
         q.push(temp);
-        cnt++;
-        if(cnt==n-k){
-            break;
-        }
     }
 
 }
