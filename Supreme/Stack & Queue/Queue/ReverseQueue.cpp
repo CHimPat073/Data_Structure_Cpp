@@ -14,6 +14,15 @@ void reverse1(queue<int> &q){
     }
 
 }
+void reverse2(queue<int> &q){
+    if(q.empty()){
+        return;
+    }
+    int temp=q.front();
+    q.pop();
+    reverse2(q);
+    q.push(temp);
+}
 int main(){
     queue<int> q;
 
@@ -24,11 +33,17 @@ int main(){
     q.push(8);
 
     reverse1(q);
+    cout<<"Stack Method"<<endl;
     while(!q.empty()){
         cout<<q.front()<<" ";
         q.pop();
     }
-    // reverse2(q);
+    reverse2(q);
+    cout<<"Recursive Method"<<endl;
+     while(!q.empty()){
+        cout<<q.front()<<" ";
+        q.pop();
+    }
 
     return 0;
 }
