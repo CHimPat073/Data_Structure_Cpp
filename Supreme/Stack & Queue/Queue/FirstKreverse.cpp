@@ -7,6 +7,7 @@ void reverseK(queue<int> &q,int k){
     while(!q.empty()){
         int temp=q.front();
         q.pop();
+        s.push(temp);
         cnt++;
         if(cnt==k){
             break;
