@@ -49,9 +49,9 @@ int main(){
     
     reverse2(q2);
     cout<<"Recursive Method"<<endl;
-     while(!q.empty()){
-        cout<<q.front()<<" ";
-        q.pop();
+     while(!q2.empty()){
+        cout<<q2.front()<<" ";
+        q2.pop();
     }
 
     return 0;
