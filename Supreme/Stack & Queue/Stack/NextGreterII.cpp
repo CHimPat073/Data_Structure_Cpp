@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> nextLargerElement(vector<int>& arr) {
+vector<int> nextLargerElementII(vector<int>& arr) {
     int n = arr.size();
     vector<int> ans(n, -1);
     stack<int> st;
@@ -22,7 +22,7 @@ vector<int> nextLargerElement(vector<int>& arr) {
 int main(){
     vector<int> arr = {1,2,1};
 
-    vector<int> ans = nextLargerElement(arr);
+    vector<int> ans = nextLargerElementII(arr);
 
     for(int x : ans){
         cout << x << " ";
