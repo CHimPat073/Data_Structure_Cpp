@@ -10,7 +10,7 @@ vector<int> nextLargerElement(vector<int>& arr) {
         while(!st.empty() && st.top()<=num){
             st.pop();
         }
-        if(!st.empty()){
+        if(i<n && !st.empty()){
             ans[i]=st.top();
         }
         st.push(num);
