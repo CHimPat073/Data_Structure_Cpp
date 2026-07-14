@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 bool isSorted(int arr[], int n, int i){
+    //i last element me hoga to mera mera array sorted ho jaeygea islye i=n-1
+
     if (i==n-1){
         return true;
     }
