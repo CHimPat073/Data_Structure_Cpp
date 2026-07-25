@@ -24,23 +24,23 @@ vector<int> inorderTraversal(Node* root) {
         return ans;
 }
 vector<int> inorderTraversalitr(Node* root) {
-    vector<int> ans;
-    if(root==NULL) return ans;
-    stack<Node*> st;
-    while(!st.empty()){
-        if(root->left!=NULL){
-            st.push(root->left);
-            root=root->left;
-        }
-        else{
-            root=st.top();
-            st.pop();
-            ans.push_back(root->data);
-            if(root->right!=NULL){
-                st.push(root->right);
+     vector<int> ans;
+        stack<Node*> st;
+        Node* temp= root;
+
+        while(true){
+            if(temp!=NULL){
+                st.push(temp);
+                temp=temp->left;
+            }
+            else{
+                if(st.empty()) break;
+                temp = st.top();
+                st.pop();
+                ans.push_back(temp->data);
+                temp= temp->right;
             }
         }
-    }
     return ans;
 }
 int main(){
