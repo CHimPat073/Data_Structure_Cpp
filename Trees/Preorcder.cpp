@@ -23,6 +23,26 @@ vector<int> preorderTraversal(Node* root) {
         helper(root,ans);
         return ans;
 }
+vector<int> preorderTraversalitr(Node* root) {
+        vector<int> ans;
+        if(root==NULL){
+            return ans;
+        }
+        stack<Node*> st;
+        st.push(root);
+        while(!st.empty()){
+            root=st.top();
+            st.pop();
+            ans.push_back(root->data);
+            if(root->right!=NULL){
+                st.push(root->right);
+            }
+            if(root->left!=NULL){
+                st.push(root->left);
+            }
+        }
+        return ans;
+    }
 int main(){
     struct Node* root=new Node(1);
     root->left=new Node(2);
@@ -31,7 +51,7 @@ int main(){
     root->left->left=new Node(4);
     root->left->right=new Node(5);
 
-    vector<int> ans=preorderTraversal(root);
+    vector<int> ans=preorderTraversalitr(root);
     for(int x:ans){
         cout<<x<<" ";
     }
