@@ -32,6 +32,20 @@ struct TreeNode{
 
         return true;
     }
+    int helper2(TreeNode* root){
+        if(root==NULL) return 0;
+
+        int lh=helper2(root->left);
+        if(lh==-1) return -1;
+        int rh=helper2(root->right);
+        if(rh==-1) return -1;
+
+        if(abs(lh-rh)>1) return -1;
+        return 1+max(lh,rh);
+    }
+    bool isBalanced2(TreeNode* root) {
+        return helper2(root) != -1;
+    }
 int main(){
     struct TreeNode* root=new TreeNode(1);
     root->left=new TreeNode(2);
