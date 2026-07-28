@@ -41,6 +41,16 @@ vector<vector<int>> helper(TreeNode* root){
         }
         return rightveiw;
     }
+    vector<int> leftveiw(TreeNode* root){
+        vector<vector<int>> ans=helper(root);
+
+        vector<int> leftveiw;
+    
+        for(int i=0;i<ans.size();i++){
+            leftveiw.push_back(ans[i].front());
+        }
+        return leftveiw;
+    }
 int main(){
     struct TreeNode* root=new TreeNode(1);
     root->left=new TreeNode(2);
