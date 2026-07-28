@@ -17,16 +17,22 @@ struct TreeNode{
         queue<TreeNode*> q;
         q.push(root);
 
+        bool flag=true;
+
         while(!q.empty()){
             int size=q.size();
-            vector<int> level;
+            vector<int> level(size);
             for(int i=0;i<size;i++){
                 TreeNode* node=q.front();
                 q.pop();
+
+                int idx=(flag) ? i :(size-1-i);
+                level[idx] = node->val;
+
                 if(node->right!=NULL) q.push(node->right);
                 if(node->left!=NULL) q.push(node->left);
-                level.push_back(node->val);
             }
+            flag = !flag;
             ans.push_back(level);
         }
         return ans;
