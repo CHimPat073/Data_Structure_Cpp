@@ -1,0 +1,1 @@
+ // head2->next->next = new Node(4);

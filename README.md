@@ -16,3 +16,4 @@ This project aims to:
 - Improve problem-solving skills
 - Practice DSA for coding interviews
 - Maintain consistency
+A collection of LeetCode questions to ace the coding interview! - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
