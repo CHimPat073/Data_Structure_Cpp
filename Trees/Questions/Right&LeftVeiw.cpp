@@ -51,6 +51,22 @@ vector<vector<int>> helper(TreeNode* root){
         }
         return leftveiw;
     }
+//optimal
+    void helper(TreeNode* node,int level,vector<int> &ans){
+        if(node==NULL) return;
+
+        if(ans.size()==level){
+            ans.push_back(node->data);
+        }
+
+        helper(node->right,level+1,ans);
+        helper(node->left,level+1,ans);
+    } 
+    vector<int> rightSideViewOptimal(TreeNode* root) {
+        vector<int> ans;
+        helper(root,0,ans);
+        return ans;
+    }
 int main(){
     struct TreeNode* root=new TreeNode(1);
     root->left=new TreeNode(2);
